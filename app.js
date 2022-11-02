@@ -791,84 +791,116 @@ MÉTODOS EM  ARRAYS - PUSH, POP, SHIFT, UNSHIFT, SORT, REVERSE, SPLICE, INDEXOF.
 
 // => EX4 - ARRAYS NO SISTEMA DO BANCO
 
-let nome ; 
-let sobreNome;
-let idade ;
-let valorEmprestimo;
-let taxadeJuros;
-let nuAnos;
-let ehBomPagador;
-let avalistas;
+// let nome ; 
+// let sobreNome;
+// let idade ;
+// let valorEmprestimo;
+// let taxadeJuros;
+// let nuAnos;
+// let ehBomPagador;
+// let avalistas;
 
-function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
-     valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+// function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+//      valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
 
-     nome = nomeCliente;
-     sobreNome = sobreNomeCliente;
-     idade = idadeCliente;
-     valorEmprestimo = valorEmprestimoCliente;
-     nuAnos = nuAnosCliente;
-     ehBomPagador = ehBomPagadorCliente;
-     taxadeJuros = defineTaxadeJuros(idadeCliente);
-     avalistas = avalistasCliente;
-}
+//      nome = nomeCliente;
+//      sobreNome = sobreNomeCliente;
+//      idade = idadeCliente;
+//      valorEmprestimo = valorEmprestimoCliente;
+//      nuAnos = nuAnosCliente;
+//      ehBomPagador = ehBomPagadorCliente;
+//      taxadeJuros = defineTaxadeJuros(idadeCliente);
+//      avalistas = avalistasCliente;
+// }
      
-function defineTaxadeJuros(idadeCliente){
-    if(idade >= 18 && idade <= 25) {
-        return 0.09;
-    }else if(idade >= 26 && idade <= 35){
-        return 0.09;
-    }else if (idade >= 36 && idade <= 50){
-        return 0.07;
-    }else{
-        return 0.06;
+// function defineTaxadeJuros(idadeCliente){
+//     if(idade >= 18 && idade <= 25) {
+//         return 0.09;
+//     }else if(idade >= 26 && idade <= 35){
+//         return 0.09;
+//     }else if (idade >= 36 && idade <= 50){
+//         return 0.07;
+//     }else{
+//         return 0.06;
+//     }
+// }
+
+// cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+// console.log(nome);
+// console.log(avalistas);
+
+
+// function adicionaAvalista(avalista){
+//     avalistas.push(avalista);
+// }
+
+// function removeAvalista(){
+//     avalistas.pop();
+// }
+
+// function editaAvalista(nomeAvalista, indice){
+//     avalistas[indice] = nomeAvalista;
+// }
+
+// function ordenarAvalista(){
+//     return avalistas.sort();
+// }
+
+// function exibeAvalistas(){
+//     avalistas.forEach((avalista, indice) => {
+//         console.log(`O ${indice + 1} avalista é ${avalista}`);
+//     })
+// }
+
+// adicionaAvalista("Marcelo");
+// adicionaAvalista("Jose");
+// adicionaAvalista("Marcos");
+// console.log(avalistas);
+
+// removeAvalista();
+// console.log(avalistas);
+
+// editaAvalista("Ricardo Solto", 0)
+// console.log(avalistas[0])
+// console.log(ordenarAvalista())
+
+// exibeAvalistas();
+
+// ARRAY MULTIDIMENSIONAL
+
+// const clientes = [["Marcio",22,true],["Carlos", 51, true],["Ricardo", 33, false]];
+
+// console.table(clientes);
+
+// LOOPS ANINHADOS - PERCORRER ARRAYS MULTIDIMENSIONAIS
+
+// const quadroFuncionarios = [["Financeiro","Kilma","Daniel"],["Marketing","Sarah","Leticia"]
+// ,["Diretoria","Keila","Marcos"]];
+
+// quadroFuncionarios.forEach((departamento, indiceDep) =>{
+//     departamento.forEach((funcionario, indiceFunc)=>{
+//         console.log(`${indiceDep + 1} - ${funcionario}` );
+
+//     })
+// })
+
+// DESAFIO ARRAY
+
+function geraRelatorio(array){
+    let contAprovados = 0;
+    let contReprovados = 0;
+    for (const nota of array){
+        if (nota >= 7){
+         contAprovados += 1;
+        }else{
+            contReprovados += 1;
+        }
     }
+
+    return `Aprovados: ${contAprovados}. Reprovados: ${contReprovados}`;
 }
 
-cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
-console.log(nome);
-console.log(avalistas);
-
-
-function adicionaAvalista(avalista){
-    avalistas.push(avalista);
-}
-
-function removeAvalista(){
-    avalistas.pop();
-}
-
-function editaAvalista(nomeAvalista, indice){
-    avalistas[indice] = nomeAvalista;
-}
-
-function ordenarAvalista(){
-    return avalistas.sort();
-}
-
-function exibeAvalistas(){
-    avalistas.forEach((avalista, indice) => {
-        console.log(`O ${indice + 1} avalista é ${avalista}`);
-    })
-}
-
-adicionaAvalista("Marcelo");
-adicionaAvalista("Jose");
-adicionaAvalista("Marcos");
-console.log(avalistas);
-
-removeAvalista();
-console.log(avalistas);
-
-editaAvalista("Ricardo Solto", 0)
-console.log(avalistas[0])
-console.log(ordenarAvalista())
-
-exibeAvalistas();
-
-
-
-
+console.log(geraRelatorio([10,8,6,5,7,8,4,3]));
 
 
 
