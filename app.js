@@ -520,41 +520,355 @@ EXEMPLO TAREFA DE DAVI
 /* PARÂMETRO REST - NOS PERMITE TRANSFORMAR UM NUMERO INDETERMINADO DE PARÂMETROS
 EM UMA LISTA, E FUNCIONA APENAS DENTRO DE UMA FUNÇÃO, SENDO ELE UM DOS ARGUMENTOS DA FUNÇÃO*/
 
-function interrogar(){
-        let numSim = 0;
-        let pergunta1 = prompt("Telefonou para a vítima?");
-        let pergunta2 = prompt("Esteve no local do crime?");
-        let pergunta3 = prompt("Mora perto da vítima?");
-        let pergunta4 = prompt("Devia para a vítima?");
-        let pergunta5 = prompt("Já trabalhou com a vítima?");
+// function interrogar(){
+//         let numSim = 0;
+//         let pergunta1 = prompt("Telefonou para a vítima?");
+//         let pergunta2 = prompt("Esteve no local do crime?");
+//         let pergunta3 = prompt("Mora perto da vítima?");
+//         let pergunta4 = prompt("Devia para a vítima?");
+//         let pergunta5 = prompt("Já trabalhou com a vítima?");
         
-        if (pergunta1 === "sim"){
-            numSim += 1;
-        }
-        if (pergunta2 === "sim"){
-            numSim += 1;
-        }
-        if (pergunta3 === "sim"){
-            numSim += 1;
-        }
-        if (pergunta4 === "sim"){
-            numSim += 1;
-        }
-        if (pergunta5 === "sim"){
-            numSim += 1;
-        }
-        return numSim;
+//         if (pergunta1 === "sim"){
+//             numSim += 1;
+//         }
+//         if (pergunta2 === "sim"){
+//             numSim += 1;
+//         }
+//         if (pergunta3 === "sim"){
+//             numSim += 1;
+//         }
+//         if (pergunta4 === "sim"){
+//             numSim += 1;
+//         }
+//         if (pergunta5 === "sim"){
+//             numSim += 1;
+//         }
+//         return numSim;
+// }
+
+// function classifica(numSim){
+//         if (numSim === 5){
+//             console.log("Assasino");
+//         }else if(numSim === 3 || numSim === 4){
+//             console.log("Cumplice");
+//         }else if (numSim === 2){
+//             console.log("Suspeito")
+//         }else{
+//             console.log("Inocente");
+//         }
+// }
+// classifica(interrogar());
+
+/*
+////////////////////////////////////////////////////ARRAY OU MATRIZ///////////////////////////////////////////////
+*/
+
+// let nome ; 
+// let sobreNome;
+// let idade ;
+// let valorEmprestimo;
+// let taxadeJuros;
+// let nuAnos;
+// let ehBomPagador;
+// let avalistas;
+
+// function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+//      valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+
+//      nome = nomeCliente;
+//      sobreNome = sobreNomeCliente;
+//      idade = idadeCliente;
+//      valorEmprestimo = valorEmprestimoCliente;
+//      nuAnos = nuAnosCliente;
+//      ehBomPagador = ehBomPagadorCliente;
+//      taxadeJuros = defineTaxadeJuros(idadeCliente);
+//      avalistas = avalistasCliente;
+// }
+     
+// function defineTaxadeJuros(idadeCliente){
+//     if(idade >= 18 && idade <= 25) {
+//         return 0.09;
+//     }else if(idade >= 26 && idade <= 35){
+//         return 0.09;
+//     }else if (idade >= 36 && idade <= 50){
+//         return 0.07;
+//     }else{
+//         return 0.06;
+//     }
+// }
+
+// cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+// console.log(nome);
+// // console.log(sobreNome);
+// // console.log(taxadeJuros);
+// // console.log(ehBomPagador);
+// console.log(avalistas);
+// console.log(avalistas[0]);
+// console.log(avalistas[1]);
+// console.log(avalistas[2]);
+
+
+/*
+/////////////////////////////////////////////OPERAÇÕES COM ARRAYS///////////////////////////////////////////////////
+*/
+// const frutas = [];
+
+// frutas[0] = "abacaxi"
+// frutas[1] = "maçã"
+// frutas[2] = "Melancia"
+// frutas[3] = "limão"
+// frutas[4] = "Morango"
+
+// console.log(frutas);
+
+// frutas[0] = "Uva"
+
+// console.log(frutas);
+
+/*
+MÉTODOS EM  ARRAYS - PUSH, POP, SHIFT, UNSHIFT, SORT, REVERSE, SPLICE, INDEXOF...ETC
+*/
+//PUSH -  ADICIONA ELEMENTOS AO FINAL DO ARRAY
+// const frutas = ["Uva","Maçã"];
+// frutas.push("Melancia");
+// console.log(frutas);
+
+// //UNSHIFT - ADICIONA ELEMENTOS NO INICIO DO ARRAY
+// const frutas = ["Uva","Maçã"];
+// frutas.unshift("Melancia");
+// console.log(frutas)
+
+//POP - REMOVE O ULTIMO ELEMENTO - SHIFT REMOVE O PRIMEIRO ELEMENTO - SPLICE REMOVE O INTERVALO
+// const frutas = ["Uva","Maçã"];
+// frutas.pop();
+// console.log(frutas)
+
+////SPLICE
+// const frutas = ["Uva","Maçã", "Melancia","banana","mamão"];
+// frutas.splice(1,2); // PRIMEIRA INFORMAÇÃO É O INDICE QUE SERÁ REMOVIDO E A SEGUNDA INFORMAÇÃO É A QUANTIDADE ELEMENTOS
+// console.log(frutas);
+
+// PODEM SER ARMAZENADOS EM VARIAVEIS PARA ANALISE
+
+// const frutas = ["Uva","Maçã", "Melancia","banana","mamão"];
+// let varPop = frutas.pop(); //ultimo
+// let varShift = frutas.shift(); //primeiro
+// let varSplice = frutas.splice(1,2); //intervalo
+// console.log(varPop); // mamão
+// console.log(varShift); // uva
+// console.log(varSplice); // melancia e banana
+
+
+// let nome ; 
+// let sobreNome;
+// let idade ;
+// let valorEmprestimo;
+// let taxadeJuros;
+// let nuAnos;
+// let ehBomPagador;
+// let avalistas;
+
+// function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+//      valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+
+//      nome = nomeCliente;
+//      sobreNome = sobreNomeCliente;
+//      idade = idadeCliente;
+//      valorEmprestimo = valorEmprestimoCliente;
+//      nuAnos = nuAnosCliente;
+//      ehBomPagador = ehBomPagadorCliente;
+//      taxadeJuros = defineTaxadeJuros(idadeCliente);
+//      avalistas = avalistasCliente;
+// }
+     
+// function defineTaxadeJuros(idadeCliente){
+//     if(idade >= 18 && idade <= 25) {
+//         return 0.09;
+//     }else if(idade >= 26 && idade <= 35){
+//         return 0.09;
+//     }else if (idade >= 36 && idade <= 50){
+//         return 0.07;
+//     }else{
+//         return 0.06;
+//     }
+// }
+
+// cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+// console.log(nome);
+// console.log(avalistas);
+
+
+// function adicionaAvalista(avalista){
+//     avalistas.push(avalista);
+// }
+
+// function removeAvalista(){
+//     avalistas.pop();
+// }
+
+// function editaAvalista(nomeAvalista, indice){
+//     avalistas[indice] = nomeAvalista;
+// }
+
+// function ordenarAvalista(){
+//     return avalistas.sort();
+// }
+
+// adicionaAvalista("Marcelo");
+// adicionaAvalista("Jose");
+// adicionaAvalista("Marcos");
+// console.log(avalistas);
+
+// removeAvalista();
+// console.log(avalistas);
+
+// editaAvalista("Ricardo Solto", 0)
+// console.log(avalistas[0])
+// console.log(ordenarAvalista())
+
+
+//METODO MAP
+// const numeros= [10,20,30,40,50]
+
+// const novosNumeros = numeros.map((numero) => numero + 10)
+
+// console.log(novosNumeros)
+
+//METODO FILTER - FILTRAR OS ELEMENTOS DE UM ARRAY
+
+// const numeros= [10,20,30,40,50]
+
+// const novosNumeros = numeros.filter((numero) => numero > 25);
+
+// console.log(novosNumeros)
+
+//METODO FIND - RETORNA O PRIMEIRO METODO DO ARRAY MEDIANTE A UMA CONDIÇÃO
+
+// const numeros= [10,20,30,40,50]
+// let numeroRetornado = numeros.find((numero) => numero > 25);
+
+// const novosNumeros = numeros.filter((numero) => numero > 25);
+
+// console.log(numeroRetornado) //30
+
+// + ARRAY
+
+// const numeros = [-7,-10,-3,0,10,20,30,40,50]
+
+// let numeroRetornado = numeros.find((numero) => numero >0);
+// let indiceRetornado = numeros.findIndex((numero) => numero > 0);
+// console.log(numeroRetornado);
+// console.log(indiceRetornado);
+
+//ACESSO ALEATÓRIO ARRAYS
+
+// const nomes = ["Joao","Carlos","Rodrigo","Caio","Pedro","Bruno"];
+
+// let indiceAleatorio =Math.floor(Math.random() * 6);
+
+// console.log(nomes[indiceAleatorio]);
+
+//PERCORRER ARRAYS
+
+// => EX1 FOR TRADICIONAL
+// const nomes = ["Joao","Carlos","Rodrigo","Caio","Pedro","Bruno"];
+// for(let i = 0; i < nomes.length; i++){
+//     console.log(nomes[i])
+// }
+
+// => EX2 FOR IN
+// const nomes = ["Joao","Carlos","Rodrigo","Caio","Pedro","Bruno"];
+// for(let indice in nomes){
+//     console.log(nomes[indice]);
+// }
+
+// => EX3 FOR EACH COM ARROW FUNCTION
+// const nomes = ["Joao","Carlos","Rodrigo","Caio","Pedro","Bruno"];
+// nomes.forEach((nomes, indice) => {
+//     console.log(nomes);
+//     console.log("Nome " + indice + ":" + nomes);
+// });
+
+// => EX4 - ARRAYS NO SISTEMA DO BANCO
+
+let nome ; 
+let sobreNome;
+let idade ;
+let valorEmprestimo;
+let taxadeJuros;
+let nuAnos;
+let ehBomPagador;
+let avalistas;
+
+function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+     valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+
+     nome = nomeCliente;
+     sobreNome = sobreNomeCliente;
+     idade = idadeCliente;
+     valorEmprestimo = valorEmprestimoCliente;
+     nuAnos = nuAnosCliente;
+     ehBomPagador = ehBomPagadorCliente;
+     taxadeJuros = defineTaxadeJuros(idadeCliente);
+     avalistas = avalistasCliente;
+}
+     
+function defineTaxadeJuros(idadeCliente){
+    if(idade >= 18 && idade <= 25) {
+        return 0.09;
+    }else if(idade >= 26 && idade <= 35){
+        return 0.09;
+    }else if (idade >= 36 && idade <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
 }
 
-function classifica(numSim){
-        if (numSim === 5){
-            console.log("Assasino");
-        }else if(numSim === 3 || numSim === 4){
-            console.log("Cumplice");
-        }else if (numSim === 2){
-            console.log("Suspeito")
-        }else{
-            console.log("Inocente");
-        }
+cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+console.log(nome);
+console.log(avalistas);
+
+
+function adicionaAvalista(avalista){
+    avalistas.push(avalista);
 }
-classifica(interrogar());
+
+function removeAvalista(){
+    avalistas.pop();
+}
+
+function editaAvalista(nomeAvalista, indice){
+    avalistas[indice] = nomeAvalista;
+}
+
+function ordenarAvalista(){
+    return avalistas.sort();
+}
+
+function exibeAvalistas(){
+    avalistas.forEach((avalista, indice) => {
+        console.log(`O ${indice + 1} avalista é ${avalista}`);
+    })
+}
+
+adicionaAvalista("Marcelo");
+adicionaAvalista("Jose");
+adicionaAvalista("Marcos");
+console.log(avalistas);
+
+removeAvalista();
+console.log(avalistas);
+
+editaAvalista("Ricardo Solto", 0)
+console.log(avalistas[0])
+console.log(ordenarAvalista())
+
+exibeAvalistas();
+
+
+
+
+
+
+
