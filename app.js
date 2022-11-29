@@ -872,7 +872,7 @@ MÉTODOS EM  ARRAYS - PUSH, POP, SHIFT, UNSHIFT, SORT, REVERSE, SPLICE, INDEXOF.
 
 // console.table(clientes);
 
-// LOOPS ANINHADOS - PERCORRER ARRAYS MULTIDIMENSIONAIS
+////LOOPS ANINHADOS - PERCORRER ARRAYS MULTIDIMENSIONAIS
 
 // const quadroFuncionarios = [["Financeiro","Kilma","Daniel"],["Marketing","Sarah","Leticia"]
 // ,["Diretoria","Keila","Marcos"]];
@@ -886,21 +886,153 @@ MÉTODOS EM  ARRAYS - PUSH, POP, SHIFT, UNSHIFT, SORT, REVERSE, SPLICE, INDEXOF.
 
 // DESAFIO ARRAY
 
-function geraRelatorio(array){
-    let contAprovados = 0;
-    let contReprovados = 0;
-    for (const nota of array){
-        if (nota >= 7){
-         contAprovados += 1;
-        }else{
-            contReprovados += 1;
-        }
-    }
+// function geraRelatorio(array){
+//     let contAprovados = 0;
+//     let contReprovados = 0;
+//     for (const nota of array){
+//         if (nota >= 7){
+//          contAprovados += 1;
+//         }else{
+//             contReprovados += 1;
+//         }
+//     }
 
-    return `Aprovados: ${contAprovados}. Reprovados: ${contReprovados}`;
+//     return `Aprovados: ${contAprovados}. Reprovados: ${contReprovados}`;
+// }
+
+// console.log(geraRelatorio([10,8,6,5,7,8,4,3]));
+
+//////coleçao de dados
+
+////##########notacao liteal
+// const carro ={
+//     nome: "Tiggo",
+//     marca: "Cherry",
+//     cor:"Preto",
+//     ano:"2015",
+//     emplacado: true,
+//     motor:{
+//         cavalos: 150,
+//         cilindradas: 2.0,
+
+//     }
+// };
+
+// console.log(carro.motor); //ACESSO VIA NOTAÇÃO POR PONTOS(MAIS)
+// console.log(carro['nome']); //ACESSO VIA NOTAÇÃO POR COLCHETES
+
+//MELHORANDO O SISTEMA DO BANCO
+
+
+// function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+//      valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+//         cliente ={
+//             nome: nomeCliente,
+//             sobreNome: sobreNomeCliente,
+//             idade: idadeCliente,
+//             emprestimo: {
+//                 valorEmprestimo: valorEmprestimoCliente,
+//                 nuAnos: nuAnosCliente,
+//                 ehBomPagador: ehBomPagadorCliente,
+//                 taxadeJuros: defineTaxadeJuros(idadeCliente),
+//                 avalistas: avalistasCliente
+//         }
+//     }
+//         return cliente;
+// }
+     
+// function defineTaxadeJuros(idadeCliente){
+//     if(idadeCliente >= 18 && idadeCliente <= 25) {
+//         return 0.09;
+//     }else if(idadeCliente >= 26 && idadeCliente <= 35){
+//         return 0.09;
+//     }else if (idadeCliente >= 36 && idadeCliente <= 50){
+//         return 0.07;
+//     }else{
+//         return 0.06;
+//     }
+// }
+
+// const cliente1 = cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+// console.log(cliente1);
+
+// conceito de metodos
+
+// const carro ={
+//     nome: "Tiggo",
+//     marca: "Cherry",
+//     cor:"Preto",
+//     ano:"2015",
+//     consumo:11,
+//     capacidadeTanque:55,
+//     emplacado: true,
+//     motor:{
+//         cavalos: 150,
+//         cilindradas: 2.0,
+
+//     },
+//     kmPercorridos: function(){
+//         return `O ${this.nome} percorre ${this.consumo * this.capacidadeTanque} KM com um tanque cheio.}`
+        
+
+//     }
+    
+// };
+
+function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
+     valorEmprestimoCliente, nuAnosCliente = 2, ehBomPagadorCliente= false, avalistasCliente){
+        cliente ={
+            nome: nomeCliente,
+            sobreNome: sobreNomeCliente,
+            idade: idadeCliente,
+            emprestimo: {
+                valorEmprestimo: valorEmprestimoCliente,
+                nuAnos: nuAnosCliente,
+                ehBomPagador: ehBomPagadorCliente,
+                taxadeJuros: defineTaxadeJuros(idadeCliente),
+                avalistas: avalistasCliente
+        },
+        adicionaAvalista: function(avalista){
+            this.emprestimo.avalistas.push(avalista);
+
+        },
+        removeAvalista: function(){
+            this.emprestimo.avalistas.pop();
+        },
+        editaAvalista: function(nomeAvalista, indice) {
+            this.emprestimo.avalistas[indice] = nomeAvalista;
+        },
+        ordenaAvlista: function(){
+            this.emprestimo.avalistas.sort();
+        },
+        exibeAvalistas: function(){
+            this.emprestimo.avalistas.forEach(avalista, indice) => {
+                console.log(``)
+                
+            });
+
+        }
+
+
+    }
+        return cliente;
+}
+     
+function defineTaxadeJuros(idadeCliente){
+    if(idadeCliente >= 18 && idadeCliente <= 25) {
+        return 0.09;
+    }else if(idadeCliente >= 26 && idadeCliente <= 35){
+        return 0.09;
+    }else if (idadeCliente >= 36 && idadeCliente <= 50){
+        return 0.07;
+    }else{
+        return 0.06;
+    }
 }
 
-console.log(geraRelatorio([10,8,6,5,7,8,4,3]));
+const cliente1 = cadastraCliente("Manuel","Silva",24,15000,2,true, ["Marcio","Anderson","Gomes"])
+console.log(cliente1);
+
 
 
 
