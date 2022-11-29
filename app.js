@@ -1006,8 +1006,8 @@ function cadastraCliente(nomeCliente, sobreNomeCliente, idadeCliente,
             this.emprestimo.avalistas.sort();
         },
         exibeAvalistas: function(){
-            this.emprestimo.avalistas.forEach(avalista, indice) => {
-                console.log(``)
+            this.emprestimo.avalistas.forEach((avalista, indice) => {
+                console.log()
                 
             });
 
